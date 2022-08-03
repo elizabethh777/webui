@@ -1,0 +1,20 @@
+@import "@primer/css/dropdown/index.scss";
+
+.rucio-dropdown{
+  @extend .dropdown;
+  &.menu {
+    @extend .dropdown-menu-se;
+  }
+  &.success {
+    border-color: green;
+  }
+  &.warn {
+    border-color:darkgoldenrod;
+  }
+  &.danger {
+    border-color:red;
+  }
+  border-radius: 5px 5px 5px 5px;
+  padding: 10px;
+  margin: 0 0 0 25px;
+}
