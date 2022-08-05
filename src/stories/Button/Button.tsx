@@ -6,6 +6,7 @@ interface ButtonProps {
     background?: string
     size?: 'small' | 'medium' | 'large'
     label: string
+    title?: string
     type?: 'button' | 'submit' | 'reset' | undefined
     selected?: boolean
     disabled?: boolean
@@ -18,6 +19,7 @@ export const Button = ({
     show,
     background,
     label,
+    title,
     type = 'button',
     selected = false,
     disabled = false,
@@ -34,6 +36,7 @@ export const Button = ({
             aria-selected={selected}
             aria-disabled={disabled}
             aria-pressed="false"
+            title={title}
             onClick={handleOnClick}
             {...props}
         >
