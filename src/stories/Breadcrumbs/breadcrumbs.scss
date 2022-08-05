@@ -1,0 +1,33 @@
+.breadcrumbs_wrapper {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: lightslategrey;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.version, .version img{
+  float:left;
+  glyph-orientation-vertical: middle;
+}
+
+.version_number {
+  color: white;
+  font-size: 10pt;
+  display:inline;
+  vertical-align: middle;
+}
+
+.path, .path a{
+  color: ghostwhite;
+}
+
+.path a:hover{
+  color: hsl(229deg, 53%, 53%);
+}
+
+.buttons {
+  float: right;
+}
