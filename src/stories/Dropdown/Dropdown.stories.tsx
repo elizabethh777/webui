@@ -12,4 +12,5 @@ const Template: ComponentStory<typeof Dropdown> = args => (<Dropdown {...args} /
 export const Primary = Template.bind({})
 Primary.args = {
     label:'Dropdown menu',
+    options:['option 1','option 2','option 3']
 }

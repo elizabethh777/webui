@@ -5,6 +5,9 @@
   &.menu {
     @extend .dropdown-menu-se;
   }
+  &.normal{
+    border-color: grey;
+  }
   &.success {
     border-color: green;
   }

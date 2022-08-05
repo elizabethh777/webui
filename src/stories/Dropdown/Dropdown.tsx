@@ -4,10 +4,12 @@ interface DropdownProps {
     label?: string
     required?:boolean
     name?: string
-    show?: 'success' | 'warn' | 'danger'
+    show?: 'success' | 'warn' | 'danger' | 'normal'
     size?: number
     multiple?: boolean
-    options?:any
+    options?: Array<any>
+    header?:string
+    headerSelected?:boolean
     onChange?: (args: any) => void
 }
 
@@ -18,7 +20,9 @@ export const Dropdown =({
     show,
     size=1,
     multiple=false,
-    options,
+    options=['option1','option2'],
+    headerSelected=true,
+    header,
     onChange,
     ...props
 }: DropdownProps) => {
@@ -33,9 +37,13 @@ export const Dropdown =({
                 multiple={multiple}
                 onChange={onChange}
             >
-                <option>1st option</option>
-                <option>2nd option</option>
-                <option>3rd option</option>
+                {headerSelected == true ?
+                    <option disabled selected>{header}</option> :
+                    <option disabled>{header}</option>
+                }
+                {options.map(x => {
+                    return <option value={x} key={x} >{x}</option>
+                })}
             </select>
         </label>
     )
