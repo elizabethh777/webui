@@ -5,18 +5,13 @@ import './breadcrumbs.scss'
 
 interface BreadcrumbsProps {
     version?: string
-    pathElement1?: string
-    pathElement1Link?:string
-    pathElement2?: string
-    pathElement2Link?:string
+    path?:Array<any>
 }
+
 
 export const Breadcrumbs = ({
     version = '1.30',
-    pathElement1,
-    pathElement1Link,
-    pathElement2,
-    pathElement2Link,
+    path=[["1st element_link","1st element"],[ "2nd element","2nd element"]],
 }: BreadcrumbsProps) => (
     <div className="breadcrumbs_wrapper">
         <>
@@ -29,13 +24,11 @@ export const Breadcrumbs = ({
                 </span>
             </div>
             <div className="path">
-                <a href={pathElement1Link}>
-                    {pathElement1}
-                </a>
-                &#x2192;
-                <a href={pathElement2Link}>
-                    {pathElement2}
-                </a>
+                {path.map((element, index )=> {
+                    return (index === 0) ?
+                        (<a href={element[0]}> {element[1]}</a>)
+                        :(<a href={element[0]}> &#x2192; {element[1]}</a>);
+                })}
             </div>
             <div className="buttons">
                 <a href="https://forms.gle/QQdhuWPLrFhgcWaNA" target="_blank">

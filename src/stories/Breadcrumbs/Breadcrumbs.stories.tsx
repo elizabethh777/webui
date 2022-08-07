@@ -15,6 +15,5 @@ const Template: ComponentStory<typeof Breadcrumbs> = args => <Breadcrumbs {...ar
 export const RuleDef = Template.bind({})
 RuleDef.args = {
     version: '1.30',
-    pathElement1: 'Rucio Rule Definition',
-    pathElement2: 'Request Rule'
+    path: [["link", "Rucio Rule Definition Droid"], ["link", "Request Rule"]],
 }
