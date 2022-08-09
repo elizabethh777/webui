@@ -16,9 +16,11 @@ export const Breadcrumbs = ({
     <div className="breadcrumbs_wrapper">
         <>
             <div className="version">
-                <Image
-                    src={require('/src/images/logo_white.png')}
-                />
+                <a href="/home">
+                    <Image
+                        src={require('/src/images/logo_white.png')}
+                    />
+                </a>
                 <span className="version_number">
                     {version}
                 </span>
@@ -31,15 +33,6 @@ export const Breadcrumbs = ({
                 })}
             </div>
             <div className="buttons">
-                <a href="https://forms.gle/QQdhuWPLrFhgcWaNA" target="_blank">
-                    <Button
-                        kind="secondary"
-                        size="small"
-                        title="Fill the survey, if you would like to help improve Rucio"
-                        label="Improve Rucio"
-                    />
-                </a>
-                &nbsp;
                 <a href="https://github.com/rucio/rucio/issues" target="_blank">
                 <Button
                     kind="secondary"
